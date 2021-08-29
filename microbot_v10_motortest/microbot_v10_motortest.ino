@@ -1,6 +1,6 @@
 /*
 Julkifli Awang Besar
-TB6612FNG test for Microbot 9.2
+TB6612FNG test for Microbot 10.0
 Motordriver test
  */
 
