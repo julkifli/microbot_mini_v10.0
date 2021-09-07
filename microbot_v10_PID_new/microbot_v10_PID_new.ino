@@ -2,10 +2,12 @@
 MiCROBOT V1
 
 Julkifli Awang Besar
-2nd C0d3
-PID for R0b0tr4c3r
+PID for MiCROBOT MiNi
 
-Suite with MiCROBOT PCB.
+Suite with MiCROBOT MINiPCB.
+
+*Required Pololu QTR Sensor 3.0.0 Library: https://github.com/pololu/qtr-sensors-arduino/archive/3.0.0.zip
+
 ***RBTX2021****
 
 */
