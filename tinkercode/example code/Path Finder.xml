@@ -1,0 +1,79 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <toolboxcategories xmlns="http://www.w3.org/1999/xhtml">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_COLOR,CAT_VARIABLES,CAT_FUNCTIONS,CAT_KIT,CAT_BOT</toolboxcategories>
+  <block type="base_setup_loop" id="PqaV+#k[LB_g:L_.We-X" x="-853" y="-595">
+    <statement name="DO">
+      <block type="microbot_mini_motor_tank" id="YJT3[vSBHKI2[~#o{;Y[">
+        <field name="DIRL">forward</field>
+        <field name="DIRR">backward</field>
+        <value name="SPEEDL">
+          <block type="math_number" id="sVrw@FrkL.@hBjg$vHbC">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <value name="SPEEDR">
+          <block type="math_number" id="siRhJ#U?,#7sO01eW![d">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_repeat" id="H%8O#_X}S8(tdoV7uSm|">
+            <field name="TIMES">150</field>
+            <statement name="DO">
+              <block type="microbot_mini_calibrate" id="pi)j)CiP{D(?m|44lwg$"/>
+            </statement>
+            <next>
+              <block type="microbot_mini_motor_stop" id="f[DoZQ{)SfBt$g%.xw_F">
+                <next>
+                  <block type="base_delay" id="8banap-*ULa+y31^z/n+">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="uRp)KWWHPdTA2(I3F2IT">
+                        <field name="NUM">2000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="microbot_mini_tillJunction" id="%EwV3~Psc-:vubGswKb(">
+        <field name="line">1</field>
+        <field name="junction">2</field>
+        <field name="action">1</field>
+        <value name="LeftRight">
+          <block type="math_number" id="ZB9pz^$qal*mdKNLs=d6">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <value name="turnspeed">
+          <block type="math_number" id="fk6!){_o:Oghoy|{*ZS?">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <value name="Kp">
+          <block type="math_number" id="h!$P!w9?6OIS?JQIqAsz">
+            <field name="NUM">0.1</field>
+          </block>
+        </value>
+        <value name="Kd">
+          <block type="math_number" id="N!,W0jm^M=3{gjI,,!5z">
+            <field name="NUM">0.2</field>
+          </block>
+        </value>
+        <value name="forwarddelay">
+          <block type="math_number" id="J_Z%@lAtGG:Q]v6ImlgG">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <value name="turndelay">
+          <block type="math_number" id="CVqAqG|(pcw=dC1ynNCV">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

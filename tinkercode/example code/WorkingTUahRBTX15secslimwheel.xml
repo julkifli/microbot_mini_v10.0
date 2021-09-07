@@ -1,0 +1,1217 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <toolboxcategories xmlns="http://www.w3.org/1999/xhtml">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_COLOR,CAT_VARIABLES,CAT_FUNCTIONS,CAT_KIT,CAT_BOT</toolboxcategories>
+  <block type="base_setup_loop" id="PqaV+#k[LB_g:L_.We-X" x="-1461" y="-396">
+    <statement name="DO">
+      <block type="tuah_mini_oled_color" id="B,QBo4voge0@~8#PjhF-">
+        <field name="colori">WHITE</field>
+        <next>
+          <block type="tuah_mini_oled_cursor" id="x0VL.~pp9:J%}1}zZr}F">
+            <value name="x">
+              <block type="math_number" id="=b^eE[SP0simbgMFRnv#">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="y">
+              <block type="math_number" id="IpK_wZ0IaX6s6=9$v1q{">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="tuah_mini_oled_clearwritedisplay" id=":G5mPawFhSDUQHe?ZuVE">
+                <value name="CONTENT">
+                  <block type="text" id="Y{8hx-Q}nt,.7]|h_2sZ">
+                    <field name="TEXT">TuahBot 2.0</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="LOOP">
+      <block type="controls_if" id="ZuqC=@W6p=X)lu(}^f%.">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" elseif="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="{!`684fvP]cH3Nkf~(P}">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="tuah_mini_ext_button" id="4L4_=95kqF.nD{/W:6+l">
+                <field name="buttonx">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="%a1I^hA9fXp]h=e,sTPH">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="base_delay" id="gt3{X9EHfXIS`.!v}D)!">
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="p|[w3:.)5[QLo(^l`;XK">
+                <field name="NUM">222</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="tuah_mini_motor_tank" id="Umq@,Y_yurITf-`%s/-7">
+                <field name="DIRL">forward</field>
+                <field name="DIRR">backward</field>
+                <value name="SPEEDL">
+                  <block type="math_number" id=")2UcriAWOE*wv$DF1(F0">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+                <value name="SPEEDR">
+                  <block type="math_number" id="Ze)JzD~*yVF8Dn{zc*r,">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_repeat" id="H%8O#_X}S8(tdoV7uSm|">
+                    <field name="TIMES">88</field>
+                    <statement name="DO">
+                      <block type="tuah_mini_calibrate" id="|Qlsy|#f1EGl!r%LL=C5"/>
+                    </statement>
+                    <next>
+                      <block type="tuah_mini_motor_stop" id="^*qo3_8Rcbs7@|A8aibF"/>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="QCUXn`Pg*iFvZ9(h@ud)">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="tuah_mini_ext_button" id="F^:l@hpE^VP!]yqKPo9(">
+                <field name="buttonx">3</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="_p-`?d7r,,-dBU*;wbj7">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="base_delay" id="`@~:nqt_l6%QI!8=9ka+">
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="LxaT+K8BoT7l2hbIdNK4">
+                <field name="NUM">222</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="tuah_mini_ext_stopwatch_control" id="$kY$Dh:V0IlZ-],bJWEk">
+                <field name="stopwatch">0</field>
+                <next>
+                  <block type="tuah_mini_ext_stopwatch_run" id="*L9QzSahV7XP)hA(/J-2">
+                    <next>
+                      <block type="tuah_mini_tillJunction" id=":S+wXavB(m6+2_~v-JSz">
+                        <field name="line">1</field>
+                        <field name="junction">2</field>
+                        <field name="action">1</field>
+                        <comment pinned="false" h="80" w="160">Start Line</comment>
+                        <value name="LeftRight">
+                          <block type="math_number" id="3X@+]p7`X(#,V+gjiA8E">
+                            <field name="NUM">200</field>
+                          </block>
+                        </value>
+                        <value name="turnspeed">
+                          <block type="math_number" id=".D=!yX{ic-@Ymt6@+]f0">
+                            <field name="NUM">70</field>
+                          </block>
+                        </value>
+                        <value name="Kp">
+                          <block type="math_number" id="c$NINK`eaMvwS7%kA:|Y">
+                            <field name="NUM">0.1</field>
+                          </block>
+                        </value>
+                        <value name="Kd">
+                          <block type="math_number" id="}XMPt.{2.Sgp,wGi%{PM">
+                            <field name="NUM">0.2</field>
+                          </block>
+                        </value>
+                        <value name="forwarddelay">
+                          <block type="math_number" id="+g0$FY8Q7T0-F9R@38,j">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <value name="turndelay">
+                          <block type="math_number" id="fR=-Vr@S?bYGeVAL#Whh">
+                            <field name="NUM">50</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="tuah_mini_turn_at_center" id="T0?y7p5C568Cr$d`3w-3">
+                            <field name="line">0</field>
+                            <field name="DIR">1</field>
+                            <comment pinned="false" h="80" w="160">Find Black Line</comment>
+                            <value name="speed">
+                              <block type="math_number" id="l$_og?rG|Lu|Jm{Sd?58">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="tuah_mini_dtracer" id="OZ)U*^RsOx*{3JwlM2@g">
+                                <field name="line">1</field>
+                                <comment pinned="false" h="80" w="160">TraceDelay for a while to make it fast</comment>
+                                <value name="LeftRight">
+                                  <block type="math_number" id="-SzBq(k6tR}[(^Uq{N~$">
+                                    <field name="NUM">85</field>
+                                  </block>
+                                </value>
+                                <value name="Kp">
+                                  <block type="math_number" id="S+Tv4@yaz0ExndX~7U%J">
+                                    <field name="NUM">0.08</field>
+                                  </block>
+                                </value>
+                                <value name="Kd">
+                                  <block type="math_number" id="k2eL1?*dYIn@BT*%0.6h">
+                                    <field name="NUM">0.01</field>
+                                  </block>
+                                </value>
+                                <value name="Delay">
+                                  <block type="math_number" id="6%C[z#L,yau6aJ$|D/tf">
+                                    <field name="NUM">1500</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="tuah_mini_tillJunction" id=",N*h%I(IzjDh52|0BSM`">
+                                    <field name="line">1</field>
+                                    <field name="junction">2</field>
+                                    <field name="action">1</field>
+                                    <comment pinned="false" h="80" w="160">First Curve</comment>
+                                    <value name="LeftRight">
+                                      <block type="math_number" id="Q*Ef-y+Dx:ZX%9:F;OeN">
+                                        <field name="NUM">70</field>
+                                      </block>
+                                    </value>
+                                    <value name="turnspeed">
+                                      <block type="math_number" id=":EG.lvnR{ANW3NUBG5Wh">
+                                        <field name="NUM">70</field>
+                                      </block>
+                                    </value>
+                                    <value name="Kp">
+                                      <block type="math_number" id="dN7524)C=/{S^$eU#/P{">
+                                        <field name="NUM">0.08</field>
+                                      </block>
+                                    </value>
+                                    <value name="Kd">
+                                      <block type="math_number" id="iEi{|_0hz#d-4`kV0}!,">
+                                        <field name="NUM">0.02</field>
+                                      </block>
+                                    </value>
+                                    <value name="forwarddelay">
+                                      <block type="math_number" id=":D);{.mRJJIYhp2SsFb|">
+                                        <field name="NUM">100</field>
+                                      </block>
+                                    </value>
+                                    <value name="turndelay">
+                                      <block type="math_number" id="z#a6K6EBU`24Es1Cl8zu">
+                                        <field name="NUM">50</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="tuah_mini_turn_at_center" id="x9C%i|24,$Dpt)xVW]RZ">
+                                        <field name="line">0</field>
+                                        <field name="DIR">1</field>
+                                        <value name="speed">
+                                          <block type="math_number" id="Agg|rjafAF62EqB3n/Zg">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="tuah_mini_tillJunction" id="FNW!L^1XPp!bnu]fe~jO">
+                                            <field name="line">1</field>
+                                            <field name="junction">2</field>
+                                            <field name="action">1</field>
+                                            <comment pinned="false" h="80" w="160">microphone path</comment>
+                                            <value name="LeftRight">
+                                              <block type="math_number" id="%[7G6:7zx2V}txGZ1.{c">
+                                                <field name="NUM">180</field>
+                                              </block>
+                                            </value>
+                                            <value name="turnspeed">
+                                              <block type="math_number" id="F$/(Ebp+jt@n))hnp@_N">
+                                                <field name="NUM">70</field>
+                                              </block>
+                                            </value>
+                                            <value name="Kp">
+                                              <block type="math_number" id="bXzG_ybCJ}k9kLb5q=bi">
+                                                <field name="NUM">0.1</field>
+                                              </block>
+                                            </value>
+                                            <value name="Kd">
+                                              <block type="math_number" id="Ntndm_V0hF%mrHmK`7/~">
+                                                <field name="NUM">0.2</field>
+                                              </block>
+                                            </value>
+                                            <value name="forwarddelay">
+                                              <block type="math_number" id="/uK5$%6YXiAffticR%S~">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <value name="turndelay">
+                                              <block type="math_number" id="r5+6?+6UVUL{R+P%uz2T">
+                                                <field name="NUM">50</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="tuah_mini_turn_at_center" id="J)yq%;~;@(cJm@93x6.s">
+                                                <field name="line">0</field>
+                                                <field name="DIR">1</field>
+                                                <value name="speed">
+                                                  <block type="math_number" id="V.HA9C|GHy:@Tm}b|8YO">
+                                                    <field name="NUM">100</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="tuah_mini_tillJunction" id="!hWjH}IpCe7K0do{6,4x">
+                                                    <field name="line">1</field>
+                                                    <field name="junction">1</field>
+                                                    <field name="action">0</field>
+                                                    <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                    <value name="LeftRight">
+                                                      <block type="math_number" id="DniBX^=v|pUX}g=`y%]k">
+                                                        <field name="NUM">150</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="turnspeed">
+                                                      <block type="math_number" id="*`Mi0sl3:+VWfV_7151w">
+                                                        <field name="NUM">200</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="Kp">
+                                                      <block type="math_number" id="=8LuhsnCI3GG%5k]SbrH">
+                                                        <field name="NUM">0.1</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="Kd">
+                                                      <block type="math_number" id="?z7Mll3eq3$h=j9rfQ{k">
+                                                        <field name="NUM">0.2</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="forwarddelay">
+                                                      <block type="math_number" id="ONIE^lP/,]OgK02vV6X%">
+                                                        <field name="NUM">50</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="turndelay">
+                                                      <block type="math_number" id="yL_-jBxB/tZSorU6#A$A">
+                                                        <field name="NUM">100</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="tuah_mini_turn_at_center" id="A+8QH*(|rrT{J2|5CBWM">
+                                                        <field name="line">0</field>
+                                                        <field name="DIR">0</field>
+                                                        <value name="speed">
+                                                          <block type="math_number" id="MsO+zfZ|kA)7^xU7*d_u">
+                                                            <field name="NUM">150</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="tuah_mini_motor_tank" id="A?Y#0g+mHJoa-e5Z.GJl">
+                                                            <field name="DIRL">forward</field>
+                                                            <field name="DIRR">backward</field>
+                                                            <value name="SPEEDL">
+                                                              <block type="math_number" id="8d#*J1=D}{y-h:9J{z!x">
+                                                                <field name="NUM">200</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="SPEEDR">
+                                                              <block type="math_number" id="HElg/22{7BS6W7DZ65DQ">
+                                                                <field name="NUM">200</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="base_delay" id="JVF_{D9t+{IR:f]olZeL">
+                                                                <value name="DELAY_TIME">
+                                                                  <shadow type="math_number" id="y;k?-y)4`!H`JHm`e8=r">
+                                                                    <field name="NUM">50</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="tuah_mini_turn_at_center" id="6_|}Z8~|m@~MH?AH|ix/">
+                                                                    <field name="line">0</field>
+                                                                    <field name="DIR">0</field>
+                                                                    <value name="speed">
+                                                                      <block type="math_number" id="D3[iwlB|,?{OIL*f;%Uz">
+                                                                        <field name="NUM">80</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="tuah_mini_dtracer" id="M#$^$qr6X#y+dz}z7J/6">
+                                                                        <field name="line">1</field>
+                                                                        <value name="LeftRight">
+                                                                          <block type="math_number" id="bXC7o)Si25BW7*p3y+,y">
+                                                                            <field name="NUM">90</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Kp">
+                                                                          <block type="math_number" id=")~z8m_0|QfU|p2QxW.ak">
+                                                                            <field name="NUM">0.08</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Kd">
+                                                                          <block type="math_number" id="Y2A=M-YOXlmo}B@8,?97">
+                                                                            <field name="NUM">0.01</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Delay">
+                                                                          <block type="math_number" id="paZ!j:V7v]zGXCI~.6(p">
+                                                                            <field name="NUM">666</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="tuah_mini_motor_tank" id="J-kg{~eltNUtIQosy_8)">
+                                                                            <field name="DIRL">forward</field>
+                                                                            <field name="DIRR">backward</field>
+                                                                            <value name="SPEEDL">
+                                                                              <block type="math_number" id="vf8*4{GS.mXXY59FiZzT">
+                                                                                <field name="NUM">100</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="SPEEDR">
+                                                                              <block type="math_number" id="]K$vqYVUm2BcN6{$q{PG">
+                                                                                <field name="NUM">100</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="base_delay" id="$*2;WPEY=y(zeb-NpJ8^">
+                                                                                <value name="DELAY_TIME">
+                                                                                  <shadow type="math_number" id="2%{hq`6.3UU=6YbhPK{b">
+                                                                                    <field name="NUM">200</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="tuah_mini_turn_at_center" id="j$GmYu[mQRBNNdQgp_mE">
+                                                                                    <field name="line">0</field>
+                                                                                    <field name="DIR">0</field>
+                                                                                    <value name="speed">
+                                                                                      <block type="math_number" id="(V@_c7!tY,xqbj|OX42i">
+                                                                                        <field name="NUM">100</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="tuah_mini_tillJunction" id="CuH0EV}-4*(35OO*;#S9">
+                                                                                        <field name="line">1</field>
+                                                                                        <field name="junction">1</field>
+                                                                                        <field name="action">0</field>
+                                                                                        <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                        <value name="LeftRight">
+                                                                                          <block type="math_number" id="dd4lP6tn]l`PatK,S#Hi">
+                                                                                            <field name="NUM">87</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="turnspeed">
+                                                                                          <block type="math_number" id="Xu$e1Lu~Kn5^2*n2sNG}">
+                                                                                            <field name="NUM">200</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="Kp">
+                                                                                          <block type="math_number" id="3J-kTG,kd5^(r=T%WiU-">
+                                                                                            <field name="NUM">0.1</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="Kd">
+                                                                                          <block type="math_number" id="!lC)(8@}xk76zgoyzO,b">
+                                                                                            <field name="NUM">0.2</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="forwarddelay">
+                                                                                          <block type="math_number" id="TvZaYRZ[^)ThOjc2}gR2">
+                                                                                            <field name="NUM">200</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="turndelay">
+                                                                                          <block type="math_number" id="k`+qQ90oFVt@)6j!w1ZH">
+                                                                                            <field name="NUM">100</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="tuah_mini_turn_at_center" id="zKW=f9zhZ2(qjSta};~f">
+                                                                                            <field name="line">0</field>
+                                                                                            <field name="DIR">0</field>
+                                                                                            <value name="speed">
+                                                                                              <block type="math_number" id="s~W`.hi;9QYX~]Q5nvJR">
+                                                                                                <field name="NUM">80</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="tuah_mini_tillJunction" id="M@.7ELkmnHm.uq`,gL0O">
+                                                                                                <field name="line">1</field>
+                                                                                                <field name="junction">2</field>
+                                                                                                <field name="action">1</field>
+                                                                                                <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                <value name="LeftRight">
+                                                                                                  <block type="math_number" id="wYI~_6bG@1n0T%}ra,,R">
+                                                                                                    <field name="NUM">100</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="turnspeed">
+                                                                                                  <block type="math_number" id="OxUhD0[sUeRzLQ.;Iko^">
+                                                                                                    <field name="NUM">100</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="Kp">
+                                                                                                  <block type="math_number" id="U+i@K:yu,v=7ziSyG7=F">
+                                                                                                    <field name="NUM">0.1</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="Kd">
+                                                                                                  <block type="math_number" id=",A}^@~awJ.+JT6n8csUA">
+                                                                                                    <field name="NUM">0.2</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="forwarddelay">
+                                                                                                  <block type="math_number" id="yIJ)}dMc,p|rJ*/G.1S1">
+                                                                                                    <field name="NUM">100</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="turndelay">
+                                                                                                  <block type="math_number" id="zGp=,|t(JOlsm2)De2wY">
+                                                                                                    <field name="NUM">50</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="tuah_mini_turn_at_center" id="4^XZpXZAC~+2gSL}bZ/}">
+                                                                                                    <field name="line">0</field>
+                                                                                                    <field name="DIR">1</field>
+                                                                                                    <value name="speed">
+                                                                                                      <block type="math_number" id="{L:#C/J[fN++y(]KK][r">
+                                                                                                        <field name="NUM">80</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="tuah_mini_tillJunction" id="sC^WucP]g{O`=rmjtYPy">
+                                                                                                        <field name="line">1</field>
+                                                                                                        <field name="junction">2</field>
+                                                                                                        <field name="action">1</field>
+                                                                                                        <comment pinned="true" h="80" w="160">left after envelop</comment>
+                                                                                                        <value name="LeftRight">
+                                                                                                          <block type="math_number" id="]k@lcSiTk-zN(%AXHlJv">
+                                                                                                            <field name="NUM">100</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="turnspeed">
+                                                                                                          <block type="math_number" id="xa-R[},X[6GHNuGp{i)k">
+                                                                                                            <field name="NUM">100</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="Kp">
+                                                                                                          <block type="math_number" id="aP+*k];GXa1#U,%W:abJ">
+                                                                                                            <field name="NUM">0.1</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="Kd">
+                                                                                                          <block type="math_number" id="7;PI,45Tkh:f|bxBsvpq">
+                                                                                                            <field name="NUM">0.2</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="forwarddelay">
+                                                                                                          <block type="math_number" id="_~.cdA3blj=2N9R*;!|y">
+                                                                                                            <field name="NUM">100</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="turndelay">
+                                                                                                          <block type="math_number" id="N/ue$DTL=OmBZ_])F$+}">
+                                                                                                            <field name="NUM">50</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="tuah_mini_turn_at_center" id="2hO9eSBJ$A#(q8Xd.C(o">
+                                                                                                            <field name="line">0</field>
+                                                                                                            <field name="DIR">1</field>
+                                                                                                            <value name="speed">
+                                                                                                              <block type="math_number" id="UYAIsOH``c.vZ?^=PmGV">
+                                                                                                                <field name="NUM">80</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="tuah_mini_tillJunction" id="nN4oCz2G:6}@xjWvL%#H">
+                                                                                                                <field name="line">1</field>
+                                                                                                                <field name="junction">1</field>
+                                                                                                                <field name="action">0</field>
+                                                                                                                <comment pinned="true" h="80" w="160">roundabout</comment>
+                                                                                                                <value name="LeftRight">
+                                                                                                                  <block type="math_number" id="i?IDYNxa#cVj5v*02DhX">
+                                                                                                                    <field name="NUM">99</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="turnspeed">
+                                                                                                                  <block type="math_number" id="L3ON;yRYaY!pPN4G-J#8">
+                                                                                                                    <field name="NUM">100</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="Kp">
+                                                                                                                  <block type="math_number" id="x_@fN~?iwc%Zzs=[Q{Lw">
+                                                                                                                    <field name="NUM">0.1</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="Kd">
+                                                                                                                  <block type="math_number" id="svr8?xp1W(vjftN|F,3?">
+                                                                                                                    <field name="NUM">0.2</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="forwarddelay">
+                                                                                                                  <block type="math_number" id="ibG~9;,!z#DmL5#A)cFa">
+                                                                                                                    <field name="NUM">77</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="turndelay">
+                                                                                                                  <block type="math_number" id="2H-jj,m=Q_le:jr.cFj}">
+                                                                                                                    <field name="NUM">100</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <next>
+                                                                                                                  <block type="tuah_mini_turn_at_center" id="-0@1qD5dc%FZTj^R@[a?">
+                                                                                                                    <field name="line">0</field>
+                                                                                                                    <field name="DIR">0</field>
+                                                                                                                    <value name="speed">
+                                                                                                                      <block type="math_number" id="2-1M_AP?]P}IDg?*M63k">
+                                                                                                                        <field name="NUM">80</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <next>
+                                                                                                                      <block type="tuah_mini_tillJunction" id="=Sk:*^0t;w1@L3Hh}%bt">
+                                                                                                                        <field name="line">1</field>
+                                                                                                                        <field name="junction">1</field>
+                                                                                                                        <field name="action">2</field>
+                                                                                                                        <comment pinned="true" h="80" w="160">2nd junc rounfabout</comment>
+                                                                                                                        <value name="LeftRight">
+                                                                                                                          <block type="math_number" id="7~/c$S{ZmlW=fIPO1+MN">
+                                                                                                                            <field name="NUM">70</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="turnspeed">
+                                                                                                                          <block type="math_number" id="#+cUTMV~Nf4*So]m.`88">
+                                                                                                                            <field name="NUM">100</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="Kp">
+                                                                                                                          <block type="math_number" id="M+Vf`=3c{lf]b%.YM@F{">
+                                                                                                                            <field name="NUM">0.1</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="Kd">
+                                                                                                                          <block type="math_number" id="Mxm#[xN:mdY6kf+Fqc%{">
+                                                                                                                            <field name="NUM">0.2</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="forwarddelay">
+                                                                                                                          <block type="math_number" id="aq)t)n4(9gcn2tDGSq!x">
+                                                                                                                            <field name="NUM">333</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="turndelay">
+                                                                                                                          <block type="math_number" id="dG8T=(zId^`-H_m$hhV]">
+                                                                                                                            <field name="NUM">100</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <next>
+                                                                                                                          <block type="tuah_mini_turn_at_center" id="V~zSU`qp!I#8@[X8}Avl">
+                                                                                                                            <field name="line">0</field>
+                                                                                                                            <field name="DIR">0</field>
+                                                                                                                            <value name="speed">
+                                                                                                                              <block type="math_number" id="?iz)UwmLExWY2|Zm0mdY">
+                                                                                                                                <field name="NUM">50</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                            <next>
+                                                                                                                              <block type="tuah_mini_tillJunction" id="DPFC4Don]{VX=ip=KfZB">
+                                                                                                                                <field name="line">1</field>
+                                                                                                                                <field name="junction">1</field>
+                                                                                                                                <field name="action">0</field>
+                                                                                                                                <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                <value name="LeftRight">
+                                                                                                                                  <block type="math_number" id="vr/;RLa)i1@NC;Zo51}w">
+                                                                                                                                    <field name="NUM">60</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="turnspeed">
+                                                                                                                                  <block type="math_number" id="%sPr~2arv?G}7.JH!T}_">
+                                                                                                                                    <field name="NUM">90</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="Kp">
+                                                                                                                                  <block type="math_number" id="EDhdpGz(+lYSof8Z@8Hq">
+                                                                                                                                    <field name="NUM">0.08</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="Kd">
+                                                                                                                                  <block type="math_number" id="X2eUmp$.:z4SW4,-DY[)">
+                                                                                                                                    <field name="NUM">0.02</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="forwarddelay">
+                                                                                                                                  <block type="math_number" id="X,;+VTi.Z%l7+%?=GTiC">
+                                                                                                                                    <field name="NUM">100</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="turndelay">
+                                                                                                                                  <block type="math_number" id="ayV%{+jOW.]vJcE(g0x}">
+                                                                                                                                    <field name="NUM">85</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <next>
+                                                                                                                                  <block type="tuah_mini_turn_at_center" id="j.Z|k4_*qE+BTD~bX8UV">
+                                                                                                                                    <field name="line">0</field>
+                                                                                                                                    <field name="DIR">0</field>
+                                                                                                                                    <value name="speed">
+                                                                                                                                      <block type="math_number" id="BMe8s}{d^QK3.PJJOLMi">
+                                                                                                                                        <field name="NUM">100</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                    <next>
+                                                                                                                                      <block type="tuah_mini_tillJunction" id="=$A}[67;ZlzGcTLDv$RT">
+                                                                                                                                        <field name="line">1</field>
+                                                                                                                                        <field name="junction">2</field>
+                                                                                                                                        <field name="action">2</field>
+                                                                                                                                        <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                        <value name="LeftRight">
+                                                                                                                                          <block type="math_number" id="V,ehscXhmJift+;wkLC[">
+                                                                                                                                            <field name="NUM">88</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="turnspeed">
+                                                                                                                                          <block type="math_number" id="YM^$%9FP,5?2f2CQ,F%]">
+                                                                                                                                            <field name="NUM">100</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="Kp">
+                                                                                                                                          <block type="math_number" id="I`ptCU^7gnvANV!%n9@.">
+                                                                                                                                            <field name="NUM">0.08</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="Kd">
+                                                                                                                                          <block type="math_number" id="fx[@VzJn4frKAImZ!Fo#">
+                                                                                                                                            <field name="NUM">0.02</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="forwarddelay">
+                                                                                                                                          <block type="math_number" id="ucVU6n2cJaZ2(GiB4NU8">
+                                                                                                                                            <field name="NUM">50</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="turndelay">
+                                                                                                                                          <block type="math_number" id="/J657-zt8/d+/N4fMl@7">
+                                                                                                                                            <field name="NUM">0</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                        <next>
+                                                                                                                                          <block type="tuah_mini_turn_at_center" id="4/L5;i1-R7raYyD#0g,-">
+                                                                                                                                            <field name="line">0</field>
+                                                                                                                                            <field name="DIR">0</field>
+                                                                                                                                            <value name="speed">
+                                                                                                                                              <block type="math_number" id="J:G[^%tUEe~{Ja^oERFV">
+                                                                                                                                                <field name="NUM">80</field>
+                                                                                                                                              </block>
+                                                                                                                                            </value>
+                                                                                                                                            <next>
+                                                                                                                                              <block type="tuah_mini_tillJunction" id="hE48y9;!p_x`tP*?Ju8b" disabled="true">
+                                                                                                                                                <field name="line">1</field>
+                                                                                                                                                <field name="junction">2</field>
+                                                                                                                                                <field name="action">0</field>
+                                                                                                                                                <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                                <value name="LeftRight">
+                                                                                                                                                  <block type="math_number" id="+zpmC;bu}#GrGS_x^y;G">
+                                                                                                                                                    <field name="NUM">100</field>
+                                                                                                                                                  </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="turnspeed">
+                                                                                                                                                  <block type="math_number" id="4Yl^(i#8,%1z!fL$Z//e">
+                                                                                                                                                    <field name="NUM">100</field>
+                                                                                                                                                  </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="Kp">
+                                                                                                                                                  <block type="math_number" id="7tRH:[tg_gJWfonO,!iv">
+                                                                                                                                                    <field name="NUM">0.1</field>
+                                                                                                                                                  </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="Kd">
+                                                                                                                                                  <block type="math_number" id="E/|K)}Lqnc+k_,TB28]?">
+                                                                                                                                                    <field name="NUM">0.2</field>
+                                                                                                                                                  </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="forwarddelay">
+                                                                                                                                                  <block type="math_number" id="#e4D9_X5_7](V!eeU$6*">
+                                                                                                                                                    <field name="NUM">0</field>
+                                                                                                                                                  </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="turndelay">
+                                                                                                                                                  <block type="math_number" id="v;j?9-}9^Qfox`hpd%7?">
+                                                                                                                                                    <field name="NUM">100</field>
+                                                                                                                                                  </block>
+                                                                                                                                                </value>
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="tuah_mini_turn_at_center" id="T@J#P+4@Eq-Mw2$*ul+T" disabled="true">
+                                                                                                                                                    <field name="line">0</field>
+                                                                                                                                                    <field name="DIR">0</field>
+                                                                                                                                                    <value name="speed">
+                                                                                                                                                      <block type="math_number" id="O7SvXQ@X]B|2Pe%M9$4{">
+                                                                                                                                                        <field name="NUM">100</field>
+                                                                                                                                                      </block>
+                                                                                                                                                    </value>
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="tuah_mini_tillJunction" id="]WyGeEShccB#(#AJSycj">
+                                                                                                                                                        <field name="line">1</field>
+                                                                                                                                                        <field name="junction">0</field>
+                                                                                                                                                        <field name="action">1</field>
+                                                                                                                                                        <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                                        <value name="LeftRight">
+                                                                                                                                                          <block type="math_number" id="NO]XyC)3N4}g6?h!AGcX">
+                                                                                                                                                            <field name="NUM">100</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="turnspeed">
+                                                                                                                                                          <block type="math_number" id="H.3U.a5w*4b)L5J.im(W">
+                                                                                                                                                            <field name="NUM">100</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="Kp">
+                                                                                                                                                          <block type="math_number" id="A^HOUn2o*qaHF7iEQpU(">
+                                                                                                                                                            <field name="NUM">0.1</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="Kd">
+                                                                                                                                                          <block type="math_number" id="]OK{@D/eiE05LvqAf1~;">
+                                                                                                                                                            <field name="NUM">0.2</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="forwarddelay">
+                                                                                                                                                          <block type="math_number" id="-MBRv_W}+GWC!Z;aPb^}">
+                                                                                                                                                            <field name="NUM">123</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="turndelay">
+                                                                                                                                                          <block type="math_number" id="v`9j,$cKf{N{1D;p7F6Z">
+                                                                                                                                                            <field name="NUM">300</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="tuah_mini_turn_at_center" id="A/78f}OSL`i7,y=3E3xf">
+                                                                                                                                                            <field name="line">0</field>
+                                                                                                                                                            <field name="DIR">1</field>
+                                                                                                                                                            <value name="speed">
+                                                                                                                                                              <block type="math_number" id="%P|do1pAf8v,eF(X=zd[">
+                                                                                                                                                                <field name="NUM">88</field>
+                                                                                                                                                              </block>
+                                                                                                                                                            </value>
+                                                                                                                                                            <next>
+                                                                                                                                                              <block type="tuah_mini_tillJunction" id="_Hp3vgmZaG^$YZYc5;{T">
+                                                                                                                                                                <field name="line">1</field>
+                                                                                                                                                                <field name="junction">1</field>
+                                                                                                                                                                <field name="action">0</field>
+                                                                                                                                                                <comment pinned="false" h="80" w="160">Triangle</comment>
+                                                                                                                                                                <value name="LeftRight">
+                                                                                                                                                                  <block type="math_number" id=";lJBW7%Dn0gKFnWJx.Yk">
+                                                                                                                                                                    <field name="NUM">200</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="turnspeed">
+                                                                                                                                                                  <block type="math_number" id="y}h-D]W/Bs3|01)=L1W-">
+                                                                                                                                                                    <field name="NUM">100</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="Kp">
+                                                                                                                                                                  <block type="math_number" id="jP:C3#t@`ei[2opoqEvA">
+                                                                                                                                                                    <field name="NUM">0.1</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="Kd">
+                                                                                                                                                                  <block type="math_number" id="[l`:np-tL$Q5t$9VnUn$">
+                                                                                                                                                                    <field name="NUM">0.2</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="forwarddelay">
+                                                                                                                                                                  <block type="math_number" id="|)KSq!p,X78fN+[0=2uM">
+                                                                                                                                                                    <field name="NUM">66</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="turndelay">
+                                                                                                                                                                  <block type="math_number" id=".Fs)U=4%BDaH0`.1x7HS">
+                                                                                                                                                                    <field name="NUM">333</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <next>
+                                                                                                                                                                  <block type="tuah_mini_turn_at_center" id="HBHy+?IFkMu!qt!j.JZ;">
+                                                                                                                                                                    <field name="line">0</field>
+                                                                                                                                                                    <field name="DIR">0</field>
+                                                                                                                                                                    <value name="speed">
+                                                                                                                                                                      <block type="math_number" id="x=O@vTc|7/C+ktJAx8*T">
+                                                                                                                                                                        <field name="NUM">88</field>
+                                                                                                                                                                      </block>
+                                                                                                                                                                    </value>
+                                                                                                                                                                    <next>
+                                                                                                                                                                      <block type="tuah_mini_tillJunction" id="5=SWUBt,fZZ$C(RzCw5b">
+                                                                                                                                                                        <field name="line">1</field>
+                                                                                                                                                                        <field name="junction">2</field>
+                                                                                                                                                                        <field name="action">1</field>
+                                                                                                                                                                        <comment pinned="true" h="80" w="160">microphone path</comment>
+                                                                                                                                                                        <value name="LeftRight">
+                                                                                                                                                                          <block type="math_number" id="?wH#gKy$yUmLPGOJFv8?">
+                                                                                                                                                                            <field name="NUM">125</field>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <value name="turnspeed">
+                                                                                                                                                                          <block type="math_number" id="]lP]7E6~13tMH3`SG4EH">
+                                                                                                                                                                            <field name="NUM">100</field>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <value name="Kp">
+                                                                                                                                                                          <block type="math_number" id="4j]O~795Pe^{4|C-pfNd">
+                                                                                                                                                                            <field name="NUM">0.1</field>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <value name="Kd">
+                                                                                                                                                                          <block type="math_number" id="VwdspyYv8$ir;}H:Ln.Q">
+                                                                                                                                                                            <field name="NUM">0.2</field>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <value name="forwarddelay">
+                                                                                                                                                                          <block type="math_number" id="Uo%sM=:cvP|}w?O1:Bi(">
+                                                                                                                                                                            <field name="NUM">66</field>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <value name="turndelay">
+                                                                                                                                                                          <block type="math_number" id="XDan0,wrBG^6Jg#5aDK5">
+                                                                                                                                                                            <field name="NUM">50</field>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </value>
+                                                                                                                                                                        <next>
+                                                                                                                                                                          <block type="tuah_mini_turn_at_center" id="}@@swa[Rq9}2ByR(@B2z">
+                                                                                                                                                                            <field name="line">0</field>
+                                                                                                                                                                            <field name="DIR">1</field>
+                                                                                                                                                                            <value name="speed">
+                                                                                                                                                                              <block type="math_number" id="T+%v84=%UEgy/6^Ndy];">
+                                                                                                                                                                                <field name="NUM">88</field>
+                                                                                                                                                                              </block>
+                                                                                                                                                                            </value>
+                                                                                                                                                                            <next>
+                                                                                                                                                                              <block type="tuah_mini_tillJunction" id="b[rd.c)GW(`QbsE~oO/T">
+                                                                                                                                                                                <field name="line">1</field>
+                                                                                                                                                                                <field name="junction">1</field>
+                                                                                                                                                                                <field name="action">0</field>
+                                                                                                                                                                                <comment pinned="true" h="80" w="160">microphone path</comment>
+                                                                                                                                                                                <value name="LeftRight">
+                                                                                                                                                                                  <block type="math_number" id="CUPS.7sd^.TsCpg3Sj)u">
+                                                                                                                                                                                    <field name="NUM">89</field>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                                <value name="turnspeed">
+                                                                                                                                                                                  <block type="math_number" id="G*%pLo4Dpeq=z6M@%jR;">
+                                                                                                                                                                                    <field name="NUM">90</field>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                                <value name="Kp">
+                                                                                                                                                                                  <block type="math_number" id="M$~f~U{(:Izk8,4WG,~C">
+                                                                                                                                                                                    <field name="NUM">0.1</field>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                                <value name="Kd">
+                                                                                                                                                                                  <block type="math_number" id="YR@_3piQ(Yl]r8+:z3wH">
+                                                                                                                                                                                    <field name="NUM">0.2</field>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                                <value name="forwarddelay">
+                                                                                                                                                                                  <block type="math_number" id="MYIyE7SfJa!kCtE3FSo0">
+                                                                                                                                                                                    <field name="NUM">66</field>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                                <value name="turndelay">
+                                                                                                                                                                                  <block type="math_number" id="Jvbka/nnXrJ;hV@;c=9,">
+                                                                                                                                                                                    <field name="NUM">50</field>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </value>
+                                                                                                                                                                                <next>
+                                                                                                                                                                                  <block type="tuah_mini_turn_at_center" id="?;N?#i#RCylfA$H]y6fa">
+                                                                                                                                                                                    <field name="line">0</field>
+                                                                                                                                                                                    <field name="DIR">0</field>
+                                                                                                                                                                                    <value name="speed">
+                                                                                                                                                                                      <block type="math_number" id="hkz;n/{A*H=}]SUa5ly?">
+                                                                                                                                                                                        <field name="NUM">88</field>
+                                                                                                                                                                                      </block>
+                                                                                                                                                                                    </value>
+                                                                                                                                                                                    <next>
+                                                                                                                                                                                      <block type="tuah_mini_tillJunction" id="a4h,%e]?Hf,7EV4AVo2V">
+                                                                                                                                                                                        <field name="line">1</field>
+                                                                                                                                                                                        <field name="junction">2</field>
+                                                                                                                                                                                        <field name="action">1</field>
+                                                                                                                                                                                        <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                                                                        <value name="LeftRight">
+                                                                                                                                                                                          <block type="math_number" id="A5=:lwA~oh/!FtUNH[KH">
+                                                                                                                                                                                            <field name="NUM">123</field>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </value>
+                                                                                                                                                                                        <value name="turnspeed">
+                                                                                                                                                                                          <block type="math_number" id="AzNH8Z0^7=i*/nx0^QM)">
+                                                                                                                                                                                            <field name="NUM">100</field>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </value>
+                                                                                                                                                                                        <value name="Kp">
+                                                                                                                                                                                          <block type="math_number" id="aRhqLITbweCiVoNwS2;b">
+                                                                                                                                                                                            <field name="NUM">0.1</field>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </value>
+                                                                                                                                                                                        <value name="Kd">
+                                                                                                                                                                                          <block type="math_number" id="pEI%KTGvE5FH=]o_^OHU">
+                                                                                                                                                                                            <field name="NUM">0.2</field>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </value>
+                                                                                                                                                                                        <value name="forwarddelay">
+                                                                                                                                                                                          <block type="math_number" id="mb+q:{c{2Vss.SJ}_z)*">
+                                                                                                                                                                                            <field name="NUM">66</field>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </value>
+                                                                                                                                                                                        <value name="turndelay">
+                                                                                                                                                                                          <block type="math_number" id="(pK[0hVrFb5,4jV2v^bb">
+                                                                                                                                                                                            <field name="NUM">50</field>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </value>
+                                                                                                                                                                                        <next>
+                                                                                                                                                                                          <block type="tuah_mini_turn_at_center" id="S)}+aRP_Rg#wn^UZe%/]">
+                                                                                                                                                                                            <field name="line">0</field>
+                                                                                                                                                                                            <field name="DIR">1</field>
+                                                                                                                                                                                            <value name="speed">
+                                                                                                                                                                                              <block type="math_number" id="s8({5.KQKTs9?S@bhG(Z">
+                                                                                                                                                                                                <field name="NUM">88</field>
+                                                                                                                                                                                              </block>
+                                                                                                                                                                                            </value>
+                                                                                                                                                                                            <next>
+                                                                                                                                                                                              <block type="tuah_mini_tillJunction" id="9kE.zK|c=u9pb4Ak`jJf">
+                                                                                                                                                                                                <field name="line">1</field>
+                                                                                                                                                                                                <field name="junction">1</field>
+                                                                                                                                                                                                <field name="action">0</field>
+                                                                                                                                                                                                <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                                                                                <value name="LeftRight">
+                                                                                                                                                                                                  <block type="math_number" id="_:q6d*3P]kAzuhM!t562">
+                                                                                                                                                                                                    <field name="NUM">123</field>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </value>
+                                                                                                                                                                                                <value name="turnspeed">
+                                                                                                                                                                                                  <block type="math_number" id="v6%d@xm9W|+2Uo#|n+Hb">
+                                                                                                                                                                                                    <field name="NUM">100</field>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </value>
+                                                                                                                                                                                                <value name="Kp">
+                                                                                                                                                                                                  <block type="math_number" id="uUqbwBoYa6cuBVu:Q`9Z">
+                                                                                                                                                                                                    <field name="NUM">0.1</field>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </value>
+                                                                                                                                                                                                <value name="Kd">
+                                                                                                                                                                                                  <block type="math_number" id="ggp)ms#6LP0--#eKa%05">
+                                                                                                                                                                                                    <field name="NUM">0.2</field>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </value>
+                                                                                                                                                                                                <value name="forwarddelay">
+                                                                                                                                                                                                  <block type="math_number" id="eN`(81}g_|r?`m)PIh5I">
+                                                                                                                                                                                                    <field name="NUM">66</field>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </value>
+                                                                                                                                                                                                <value name="turndelay">
+                                                                                                                                                                                                  <block type="math_number" id="@}yci9[k!JlS0zl6XWXE">
+                                                                                                                                                                                                    <field name="NUM">50</field>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </value>
+                                                                                                                                                                                                <next>
+                                                                                                                                                                                                  <block type="tuah_mini_turn_at_center" id="A{wmeoUv8v4_r8%TI)`4">
+                                                                                                                                                                                                    <field name="line">0</field>
+                                                                                                                                                                                                    <field name="DIR">0</field>
+                                                                                                                                                                                                    <value name="speed">
+                                                                                                                                                                                                      <block type="math_number" id="GCW~rok3P:vEK7nV_B6K">
+                                                                                                                                                                                                        <field name="NUM">88</field>
+                                                                                                                                                                                                      </block>
+                                                                                                                                                                                                    </value>
+                                                                                                                                                                                                    <next>
+                                                                                                                                                                                                      <block type="tuah_mini_tillJunction" id="~2ABwh[0)_u|vQQd7B=`">
+                                                                                                                                                                                                        <field name="line">1</field>
+                                                                                                                                                                                                        <field name="junction">1</field>
+                                                                                                                                                                                                        <field name="action">2</field>
+                                                                                                                                                                                                        <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                                                                                        <value name="LeftRight">
+                                                                                                                                                                                                          <block type="math_number" id="wdb?b_6yA$A$0hj9zHD2">
+                                                                                                                                                                                                            <field name="NUM">200</field>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </value>
+                                                                                                                                                                                                        <value name="turnspeed">
+                                                                                                                                                                                                          <block type="math_number" id="6(r(UxE8.w3tPJ9vXDy?">
+                                                                                                                                                                                                            <field name="NUM">100</field>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </value>
+                                                                                                                                                                                                        <value name="Kp">
+                                                                                                                                                                                                          <block type="math_number" id="RO_4uq[j`vvd89C0kDY_">
+                                                                                                                                                                                                            <field name="NUM">0.1</field>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </value>
+                                                                                                                                                                                                        <value name="Kd">
+                                                                                                                                                                                                          <block type="math_number" id="va.|L(Tx2rxgltsg:JeD">
+                                                                                                                                                                                                            <field name="NUM">0.2</field>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </value>
+                                                                                                                                                                                                        <value name="forwarddelay">
+                                                                                                                                                                                                          <block type="math_number" id="r1_S~G_*Ja^de{Lwi#_)">
+                                                                                                                                                                                                            <field name="NUM">0</field>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </value>
+                                                                                                                                                                                                        <value name="turndelay">
+                                                                                                                                                                                                          <block type="math_number" id="QLtMQyK;m9UTij2$g0Ag">
+                                                                                                                                                                                                            <field name="NUM">50</field>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </value>
+                                                                                                                                                                                                        <next>
+                                                                                                                                                                                                          <block type="tuah_mini_tillJunction" id="wR%Xim:;Fulz2O$O:fMC">
+                                                                                                                                                                                                            <field name="line">1</field>
+                                                                                                                                                                                                            <field name="junction">0</field>
+                                                                                                                                                                                                            <field name="action">2</field>
+                                                                                                                                                                                                            <comment pinned="false" h="80" w="160">microphone path</comment>
+                                                                                                                                                                                                            <value name="LeftRight">
+                                                                                                                                                                                                              <block type="math_number" id="*dy9t[xvPrThCV{!(n=9">
+                                                                                                                                                                                                                <field name="NUM">200</field>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </value>
+                                                                                                                                                                                                            <value name="turnspeed">
+                                                                                                                                                                                                              <block type="math_number" id="Vy4B]HM8*?,P#1_$G,*0">
+                                                                                                                                                                                                                <field name="NUM">100</field>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </value>
+                                                                                                                                                                                                            <value name="Kp">
+                                                                                                                                                                                                              <block type="math_number" id="Fyy_]bEGTNW#LZ%/(P]U">
+                                                                                                                                                                                                                <field name="NUM">0.1</field>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </value>
+                                                                                                                                                                                                            <value name="Kd">
+                                                                                                                                                                                                              <block type="math_number" id="n5cjhBm0mmRO{Vlbqs5g">
+                                                                                                                                                                                                                <field name="NUM">0.2</field>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </value>
+                                                                                                                                                                                                            <value name="forwarddelay">
+                                                                                                                                                                                                              <block type="math_number" id="!ytlUIg$J9Py=kIy;?^:">
+                                                                                                                                                                                                                <field name="NUM">0</field>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </value>
+                                                                                                                                                                                                            <value name="turndelay">
+                                                                                                                                                                                                              <block type="math_number" id=".;+`fBHgrL|q|n(4qnKB">
+                                                                                                                                                                                                                <field name="NUM">50</field>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </value>
+                                                                                                                                                                                                            <next>
+                                                                                                                                                                                                              <block type="tuah_mini_ext_stopwatch_run" id="4Yo+Ug;QyH08Nyc^~5d_">
+                                                                                                                                                                                                                <next>
+                                                                                                                                                                                                                  <block type="tuah_mini_ext_stopwatch_control" id="NPCBAypP6Sy[,D#39yGb">
+                                                                                                                                                                                                                    <field name="stopwatch">3</field>
+                                                                                                                                                                                                                    <next>
+                                                                                                                                                                                                                      <block type="tuah_mini_motor_stop" id="uBIi08MDgia1MRYhV7*v"/>
+                                                                                                                                                                                                                    </next>
+                                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                                </next>
+                                                                                                                                                                                                              </block>
+                                                                                                                                                                                                            </next>
+                                                                                                                                                                                                          </block>
+                                                                                                                                                                                                        </next>
+                                                                                                                                                                                                      </block>
+                                                                                                                                                                                                    </next>
+                                                                                                                                                                                                  </block>
+                                                                                                                                                                                                </next>
+                                                                                                                                                                                              </block>
+                                                                                                                                                                                            </next>
+                                                                                                                                                                                          </block>
+                                                                                                                                                                                        </next>
+                                                                                                                                                                                      </block>
+                                                                                                                                                                                    </next>
+                                                                                                                                                                                  </block>
+                                                                                                                                                                                </next>
+                                                                                                                                                                              </block>
+                                                                                                                                                                            </next>
+                                                                                                                                                                          </block>
+                                                                                                                                                                        </next>
+                                                                                                                                                                      </block>
+                                                                                                                                                                    </next>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </next>
+                                                                                                                                                              </block>
+                                                                                                                                                            </next>
+                                                                                                                                                          </block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </next>
+                                                                                                                                  </block>
+                                                                                                                                </next>
+                                                                                                                              </block>
+                                                                                                                            </next>
+                                                                                                                          </block>
+                                                                                                                        </next>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_forever" id="iLgy_,rY#wYjp9iu),pP" disabled="true" x="26" y="107"/>
+</xml>
