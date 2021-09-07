@@ -1,3 +1,9 @@
+/*
+*Required Pololu QTR Sensor 3.0.0 Library: https://github.com/pololu/qtr-sensors-arduino/archive/3.0.0.zip
+
+
+*/
+
 #include <QTRSensors.h>
 
 
